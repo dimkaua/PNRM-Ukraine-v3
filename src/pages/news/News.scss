@@ -1,0 +1,85 @@
+.news {
+  padding: 30px;
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 81px;
+
+    .news__card {
+      width: calc(33.33% - 20px);
+      background-color: #ffffff;
+      border-radius: 15px;
+
+      cursor: pointer;
+      margin-bottom: 20px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      .news__link {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .news__card-image {
+        width: 100%;
+        border-radius: 5px;
+      }
+
+      .news__info {
+        margin: 20px;
+        font-family: 'e-Ukraine-Regular', sans-serif;
+        h3 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 14px;
+          color: #acacac;
+          margin: 5px 0 0;
+        }
+      }
+    }
+  }
+
+  .read-more-button {
+    display: block;
+    margin: 20px auto;
+    padding: 17px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'e-Ukraine-Regular', sans-serif;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: #6969f8;
+      color: #ffffff;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    margin: 170px 0 140px 0;
+    font-family: 'e-Ukraine-Regular', sans-serif;
+    font-size: 24px;
+
+    a {
+      color: #6969f8;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+}

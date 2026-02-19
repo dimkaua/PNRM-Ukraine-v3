@@ -1,0 +1,85 @@
+.footer {
+  border-top: 2px solid #000000;
+  padding: 71px 0;
+  font-size: 20px;
+  font-family: 'e-Ukraine-Regular', sans-serif;
+
+  &__content {
+    .container {
+      .footer__inner {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 50px;
+        text-align: left; // повертаємо вирівнювання по лівому краю
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+          gap: 30px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-family: 'e-Ukraine-Bold', sans-serif;
+    text-align: center; // центруємо заголовки
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 350px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+      font-size: 16px;
+    }
+  }
+
+  &__contacts,
+  &__about {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; // центруємо всі елементи по горизонталі
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    // align-items: center; // центруємо список соціальних мереж
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__social-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    & a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #000000;
+    }
+
+    & img.footer__icon {
+      display: inline-block;
+      margin-right: 15px;
+      width: 45px;
+      height: 45px;
+    }
+  }
+}

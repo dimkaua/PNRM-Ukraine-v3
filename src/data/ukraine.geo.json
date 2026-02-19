@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Ukraine" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [22, 44],
+            [40, 44],
+            [40, 52],
+            [22, 52],
+            [22, 44]
+          ]
+        ]
+      }
+    }
+  ]
+}

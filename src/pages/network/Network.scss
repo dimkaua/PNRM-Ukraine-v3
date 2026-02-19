@@ -1,0 +1,114 @@
+.container {
+  .dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 52px;
+    margin-bottom: 88px;
+    padding: 0 15px; // захист від прилипання до країв на мобілках
+
+    &__box-1,
+    &__box-3 {
+      background-color: #ffffff;
+      border: 1px solid #ffffff;
+      border-radius: 30px;
+      padding: 22px;
+      width: 100%;
+      max-width: 950px;
+      margin-bottom: 30px;
+      position: relative;
+      font-size: 27px;
+      font-family: 'e-Ukraine-Regular', sans-serif;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -28px;
+        left: 40px;
+        transform: translateX(0);
+        border-width: 0 18px 3px 0px;
+        width: 0;
+        height: 0;
+        border-left: 0 solid transparent;
+        border-right: 40px solid transparent;
+        border-top: 30px solid #ffffff;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+        padding: 16px;
+      }
+    }
+
+    &__box-2 {
+      background-color: #ffffff;
+      border: 1px solid #ffffff;
+      border-radius: 30px;
+      padding: 22px;
+      width: 100%;
+      max-width: 700px;
+      margin: 30px auto;
+      position: relative;
+      font-size: 27px;
+      font-family: 'e-Ukraine-Regular', sans-serif;
+
+      a {
+        color: #6969f8;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -28px;
+        right: 55px;
+        transform: translateX(50%);
+        border-width: 0 18px 3px 0px;
+        width: 0;
+        height: 0;
+        border-left: 0 solid transparent;
+        border-right: 40px solid transparent;
+        border-top: 30px solid #ffffff;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+        padding: 16px;
+        &::before {
+          right: 30px;
+        }
+      }
+    }
+
+    p {
+      font-family: 'e-Ukraine-Regular', sans-serif;
+      font-size: 20px;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .slider-network {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 168px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 80px; // менший відступ на мобілках
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+}
+
+.map-section {
+  margin-bottom: 40px;
+
+  .integration-map {
+    height: 70vh; // карта займає більшу частину екрану
+    width: 100%;
+  }
+}

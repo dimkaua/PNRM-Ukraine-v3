@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'e-Ukraine-Bold';
+  src: url('/../public/fonts/e-Ukraine-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'e-Ukraine-Regular';
+  src: url('/../public/fonts/e-Ukraine-Regular.otf') format('opentype');
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url('/../public/img/bg.jpg');
+  background-size: cover;
+  // background-repeat: no-repeat;
+  // height: 100vh;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url('/../public/img/bg-mobile.jpg');
+    background-size: cover;
+  }
+}

@@ -1,0 +1,290 @@
+// Кольори
+$primary-orange: #e9a42d;
+$primary-blue: #6868fb;
+$white: #ffffff;
+$gray-50: #f8fafc;
+$gray-100: #f1f5f9;
+$gray-200: #e2e8f0;
+$gray-600: #475569;
+$gray-700: #334155;
+$gray-800: #1e293b;
+$black: #000000;
+
+// Шрифти
+$font-regular: 'e-Ukraine-Regular', sans-serif;
+$font-bold: 'e-Ukraine-Bold', sans-serif;
+
+// Брейкпоінти
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$large-desktop: 1440px;
+
+// Міксини
+@mixin gradient-primary {
+  background: linear-gradient(135deg, $primary-blue 0%, $primary-orange 100%);
+}
+
+@mixin gradient-light {
+  background: linear-gradient(
+    135deg,
+    rgba($primary-orange, 0.1) 0%,
+    rgba($primary-blue, 0.1) 100%
+  );
+}
+
+@mixin card-shadow {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+@mixin hover-transform {
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Баннер секція
+.main-menu {
+  &__banner {
+    width: 100%;
+    margin-bottom: 2rem;
+
+    .banner__image-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .banner__image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 25px rgba($black, 0.2);
+      object-fit: contain; // ⬅️ не обрізає висоту
+    }
+  }
+
+  // Контент секція
+  &__content {
+    padding: 4rem 0;
+
+    .content__wrapper {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+
+    .content__card {
+      background: $white;
+      border-radius: 1rem;
+      @include card-shadow;
+      padding: 2rem;
+
+      @media (min-width: $tablet) {
+        padding: 3rem;
+      }
+    }
+
+    .content__title {
+      font-family: $font-bold;
+      font-size: 2rem;
+      color: $primary-blue;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 700;
+      line-height: 1.2;
+
+      @media (min-width: $tablet) {
+        font-size: 2.5rem;
+      }
+
+      @media (min-width: $desktop) {
+        font-size: 30px;
+      }
+    }
+
+    .content__text {
+      font-family: $font-regular;
+      max-width: none;
+      color: $gray-700;
+      line-height: 1.75;
+
+      p {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .content__description--main {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .content__description {
+      font-size: 18px;
+    }
+
+    .content__secretariat {
+      @include gradient-light;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      border-left: 4px solid $primary-orange;
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+  }
+
+  // Брендбук секція
+  &__brandbook {
+    margin-top: 115px;
+
+    .brandbook__wrapper {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+
+    .brandbook__card {
+      @include gradient-light;
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      border: 1px solid rgba($primary-orange, 0.2);
+
+      @media (min-width: $tablet) {
+        padding: 3rem;
+      }
+    }
+
+    .brandbook__icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 4rem;
+      height: 4rem;
+      background: $primary-orange;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+
+      .brandbook__icon-svg {
+        width: 2rem;
+        height: 2rem;
+        color: $white;
+      }
+    }
+
+    .brandbook__title {
+      font-family: $font-bold;
+      font-size: 30px;
+      font-weight: 700;
+      color: $primary-blue;
+      margin-bottom: 1rem;
+    }
+
+    .brandbook__description {
+      font-family: $font-regular;
+      font-size: 20px;
+      color: $gray-600;
+      margin-bottom: 2rem;
+      max-width: 512px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .brandbook__button {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      @include gradient-primary;
+      color: $white;
+      font-family: $font-bold;
+      font-weight: 700;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      @include hover-transform;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+      .brandbook__button-icon {
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-right: 0.5rem;
+      }
+
+      &:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  // Галерея секція
+  &__gallery {
+    margin-top: 115px;
+
+    .gallery__wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery__title {
+      font-family: $font-bold;
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+      color: $primary-blue;
+      margin-bottom: 115px;
+    }
+  }
+
+  // Декоративний розділювач
+  &__divider {
+    margin-top: 115px;
+    padding-bottom: 115px;
+
+    .divider__line {
+      max-width: 1024px;
+      margin: 0 auto;
+      height: 4px;
+      @include gradient-primary;
+      border-radius: 9999px;
+    }
+  }
+}
+
+// Responsive стилі
+@media (max-width: $tablet) {
+  .main-menu {
+    &__banner {
+      padding: 2rem 0;
+
+      .banner__image {
+        margin-bottom: 1rem;
+        height: auto;
+      }
+    }
+
+    &__content,
+    &__brandbook,
+    &__gallery {
+      padding: 2rem 0;
+    }
+
+    .content__card,
+    .brandbook__card {
+      padding: 1.5rem;
+    }
+
+    .content__title {
+      font-size: 1.75rem;
+    }
+
+    .brandbook__title {
+      font-size: 1.5rem;
+    }
+
+    .gallery__title {
+      font-size: 1.5rem;
+    }
+  }
+}

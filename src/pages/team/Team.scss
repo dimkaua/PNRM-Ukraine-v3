@@ -1,0 +1,108 @@
+.container {
+  .teams-page {
+    h2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'e-Ukraine-Bold', sans-serif;
+      font-size: 30px;
+      margin: 50px 0;
+      color: #6868fb;
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0 10px 90px;
+
+    .name {
+      font-family: 'e-Ukraine-Bold', sans-serif;
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .position {
+      color: #a1a1a1;
+      font-size: 14px;
+      font-family: 'e-Ukraine-Regular', sans-serif;
+      margin-bottom: 70px;
+      width: 260px;
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+    }
+  }
+
+  .photo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      width: 30%;
+      height: auto;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    .description {
+      font-size: 18px;
+      font-family: 'e-Ukraine-Regular', sans-serif;
+      padding: 20px;
+      width: 630px;
+      border-radius: 15px;
+      margin: 0 auto;
+      background-color: #fff;
+      position: relative;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .description::before {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background-color: #fddaa8;
+      border-radius: 50%;
+      left: -20px;
+      top: 14%;
+      transform: translateY(-60%);
+      z-index: -1;
+      filter: blur(8px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .photo {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .description {
+        font-family: 'e-Ukraine-Regular', sans-serif;
+        font-size: 17px;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

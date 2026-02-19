@@ -1,0 +1,237 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+
+  .about {
+    margin-top: 50px;
+    margin-right: 0px;
+    margin-bottom: 115px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-right: 115px;
+    padding-bottom: 0px;
+    padding-left: 115px;
+
+    h2 {
+      display: flex;
+      justify-content: center;
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 115px;
+      margin-left: 0px;
+      font-family: 'e-Ukraine-Bold', sans-serif;
+      font-size: 30px;
+      color: #6868fb;
+    }
+
+    p {
+      font-family: 'e-Ukraine-Regular', sans-serif;
+      font-size: 18px;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1.6;
+      color: #000000;
+
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 20px;
+      margin-left: 0px;
+    }
+
+    @media (max-width: 768px) {
+      padding-top: 0px;
+      padding-right: 30px;
+      padding-bottom: 0px;
+      padding-left: 30px;
+
+      h2 {
+        font-size: 22px;
+        text-align: center;
+
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 40px;
+        margin-left: 0px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .mission {
+    display: flex;
+    align-items: center;
+    gap: 95px;
+    padding-top: 0px;
+    padding-right: 115px;
+    padding-bottom: 0px;
+    padding-left: 115px;
+
+    h2 {
+      white-space: nowrap;
+      justify-content: center;
+      font-family: 'e-Ukraine-Bold', sans-serif;
+      font-size: 30px;
+      color: #6868fb;
+    }
+
+    p {
+      font-family: 'e-Ukraine-Regular', sans-serif;
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .mission {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 0px;
+      padding-right: 30px;
+      padding-bottom: 0px;
+      padding-left: 30px;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mission h2 {
+      font-size: 20px;
+    }
+
+    .mission p {
+      font-size: 18px;
+    }
+  }
+
+  .direction {
+    margin-top: 115px;
+
+    h2 {
+      display: flex;
+      justify-content: center;
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 115px;
+      margin-left: 0px;
+      font-family: 'e-Ukraine-Bold', sans-serif;
+      font-size: 30px;
+      color: #6868fb;
+    }
+
+    &__items {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .direction__item {
+      width: calc(33.33% - 20px);
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 48px;
+      margin-left: 0px;
+    }
+
+    .direction__icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      img {
+        width: 300px;
+        height: 240px;
+      }
+
+      span {
+        margin-top: 49px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        text-align: center;
+        font-family: 'e-Ukraine-Regular', sans-serif;
+        font-size: 20px;
+
+        @media (max-width: 992px) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    @media (max-width: 992px) {
+      .direction__item {
+        width: calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 40px;
+        margin-left: 0px;
+        font-size: 20px;
+      }
+
+      .direction__item {
+        width: 100%;
+      }
+    }
+
+    &__subtitle {
+      margin-top: 115px;
+      margin-right: 0px;
+      margin-bottom: 115px;
+      margin-left: 0px;
+
+      padding-top: 30px;
+      padding-right: 30px;
+      padding-bottom: 30px;
+      padding-left: 30px;
+
+      position: relative;
+
+      p {
+        font-size: 18px;
+
+        b {
+          font-family: 'e-Ukraine-Bold', sans-serif;
+        }
+
+        font-family: 'e-Ukraine-Regular', sans-serif;
+
+        @media (max-width: 768px) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .direction__subtitle::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 30px;
+      background-color: #e9a42d;
+      left: 10px;
+      transform: translateY(-350%);
+      z-index: -1;
+    }
+
+    .direction__subtitle::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #e9a42d;
+      border-radius: 50%;
+      left: 10px;
+      transform: translateY(400%);
+      z-index: -1;
+    }
+  }
+}
