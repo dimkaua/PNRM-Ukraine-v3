@@ -5,6 +5,14 @@ import './News.scss'
 
 const initialNews = [
   {
+    id: 20,
+    title:
+      'EUComplianceM4UA: третя транскордонна зустріч підтвердила практичну цінність проєкту для українських університетів',
+    date: '17-19 березня 2026 року',
+    imageUrlUk: '/img/photo_news/news20.png',
+    imageUrlEn: '/img/photo_news/news20.png',
+  },
+  {
     id: 19,
     title:
       'ПНРМ провели перший тренінг для менеджерів науки України: від мрії до плану',
