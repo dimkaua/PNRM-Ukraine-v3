@@ -12,6 +12,21 @@ const OurDirection = ({ photo, description }) => (
   </div>
 )
 
+const BoardMember = ({ photo, nameId, positionId, bioId }) => (
+  <div className="board__member">
+    <img src={photo} alt="board member" />
+    <span className="board__member-name">
+      <FormattedMessage id={nameId} />
+    </span>
+    <span className="board__member-position">
+      <FormattedMessage id={positionId} />
+    </span>
+    <p className="board__member-bio">
+      <FormattedMessage id={bioId} />
+    </p>
+  </div>
+)
+
 const ourDirections = [
   {
     id: 1,
@@ -42,6 +57,67 @@ const ourDirections = [
     id: 6,
     photo: './img/categories_mini/Management of displacement.png',
     description: 'direction.description6',
+  },
+]
+
+// фото членів Наглядової ради
+const boardMembers = [
+  {
+    id: 1,
+    photo: '/img/team/ShevchukO.png',
+    nameId: 'board.member1.name',
+    positionId: 'board.member1.position',
+    bioId: 'board.member1.bio',
+  },
+  {
+    id: 2,
+    photo: '/img/team/NesterenkoR.png',
+    nameId: 'board.member2.name',
+    positionId: 'board.member2.position',
+    bioId: 'board.member2.bio',
+  },
+  {
+    id: 3,
+    photo: './img/team/ShalimovaN.png',
+    nameId: 'board.member3.name',
+    positionId: 'board.member3.position',
+    bioId: 'board.member3.bio',
+  },
+]
+
+const boardRegulations = [
+  {
+    titleId: 'board.section1.title',
+    itemIds: ['board.section1.item1', 'board.section1.item2', 'board.section1.item3'],
+  },
+  {
+    titleId: 'board.section2.title',
+    itemIds: ['board.section2.item1', 'board.section2.item2'],
+  },
+  {
+    titleId: 'board.section3.title',
+    itemIds: ['board.section3.item1', 'board.section3.item2', 'board.section3.item3'],
+  },
+  {
+    titleId: 'board.section4.title',
+    itemIds: [
+      'board.section4.item1',
+      'board.section4.item2',
+      'board.section4.item3',
+      'board.section4.item4',
+    ],
+  },
+  {
+    titleId: 'board.section5.title',
+    itemIds: ['board.section5.item1', 'board.section5.item2', 'board.section5.item3'],
+  },
+  {
+    titleId: 'board.section6.title',
+    itemIds: ['board.section6.item1', 'board.section6.item2'],
+  },
+  {
+    titleId: 'board.section7.title',
+    itemIds: ['board.section7.item1', 'board.section7.item2'],
   },
 ]
 
@@ -97,6 +173,54 @@ function Eventing() {
           <p>
             <FormattedMessage id="direction.subtitle" />
           </p>
+        </div>
+      </div>
+
+      <div className="board">
+        <h2>
+          <FormattedMessage id="board.title" />
+        </h2>
+        <p className="board__intro">
+          <FormattedMessage id="board.intro" />
+        </p>
+
+        <h3 className="board__composition-title">
+          <FormattedMessage id="board.compositionTitle" />
+        </h3>
+        <div className="board__members">
+          {boardMembers.map((member) => (
+            <BoardMember
+              key={member.id}
+              photo={member.photo}
+              nameId={member.nameId}
+              positionId={member.positionId}
+              bioId={member.bioId}
+            />
+          ))}
+        </div>
+
+        <div className="board__regulations">
+          <h3 className="board__regulations-title">
+            <FormattedMessage id="board.regulationsTitle" />
+          </h3>
+          <p className="board__regulations-approved">
+            <FormattedMessage id="board.regulationsApproved" />
+          </p>
+
+          {boardRegulations.map((section, index) => (
+            <div className="board__regulations-section" key={index}>
+              <h4>
+                <FormattedMessage id={section.titleId} />
+              </h4>
+              <ul>
+                {section.itemIds.map((itemId) => (
+                  <li key={itemId}>
+                    <FormattedMessage id={itemId} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </div>

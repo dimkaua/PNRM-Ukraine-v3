@@ -40,7 +40,6 @@ const networkPhotos = [
   { url: './img/network/35.jpg', alt: '35' },
   { url: './img/network/36.jpg', alt: '36' },
   { url: './img/network/37.jpg', alt: '37' },
-  { url: './img/network/38.jpg', alt: '38' },
 ]
 
 function NetworkSliderGallery() {

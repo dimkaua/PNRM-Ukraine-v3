@@ -136,13 +136,13 @@ const TeamDetail = () => {
     {
       name: 'Ганна Толстанова',
       nameKey: 'team.member.hanna.name',
-      period: '',
+      period: '2022-2024',
       achievementsKey: 'team.member.hanna.achievements',
     },
     {
       name: 'Вікторія Гура',
       nameKey: 'team.member.victoria.name',
-      period: '',
+      period: '2025+',
       achievementsKey: 'team.member.victoria.achievements',
     },
   ]

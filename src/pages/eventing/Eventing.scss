@@ -234,4 +234,200 @@
       z-index: -1;
     }
   }
+
+  .board {
+    margin-top: 115px;
+    padding-top: 0px;
+    padding-right: 115px;
+    padding-bottom: 0px;
+    padding-left: 115px;
+
+    h2 {
+      display: flex;
+      justify-content: center;
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 115px;
+      margin-left: 0px;
+      font-family: 'e-Ukraine-Bold', sans-serif;
+      font-size: 30px;
+      color: #6868fb;
+    }
+
+    &__intro {
+      font-family: 'e-Ukraine-Regular', sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #000000;
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 60px;
+      margin-left: 0px;
+    }
+
+    &__composition-title {
+      font-family: 'e-Ukraine-Bold', sans-serif;
+      font-size: 22px;
+      color: #6868fb;
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 48px;
+      margin-left: 0px;
+      text-align: center;
+    }
+
+    &__members {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    &__member {
+      width: calc(33.33% - 27px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      img {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      &-name {
+        margin-top: 24px;
+        font-family: 'e-Ukraine-Bold', sans-serif;
+        font-size: 20px;
+        color: #000000;
+      }
+
+      &-position {
+        margin-top: 6px;
+        font-family: 'e-Ukraine-Regular', sans-serif;
+        font-size: 16px;
+        color: #6868fb;
+      }
+
+      &-bio {
+        margin-top: 14px;
+        margin-bottom: 0px;
+        font-family: 'e-Ukraine-Regular', sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #000000;
+      }
+    }
+
+    &__regulations {
+      margin-top: 115px;
+      padding-top: 30px;
+      padding-right: 30px;
+      padding-bottom: 30px;
+      padding-left: 30px;
+      position: relative;
+    }
+
+    &__regulations-title {
+      font-family: 'e-Ukraine-Bold', sans-serif;
+      font-size: 24px;
+      color: #6868fb;
+      text-align: center;
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 20px;
+      margin-left: 0px;
+    }
+
+    &__regulations-approved {
+      font-family: 'e-Ukraine-Regular', sans-serif;
+      font-size: 16px;
+      font-style: italic;
+      color: #555555;
+      text-align: center;
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 48px;
+      margin-left: 0px;
+    }
+
+    &__regulations-section {
+      margin-bottom: 32px;
+
+      h4 {
+        font-family: 'e-Ukraine-Bold', sans-serif;
+        font-size: 20px;
+        color: #6868fb;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 15px;
+        margin-left: 0px;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      li {
+        font-family: 'e-Ukraine-Regular', sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #000000;
+        margin-bottom: 12px;
+
+        &::marker {
+          color: #6868fb;
+        }
+      }
+    }
+
+    @media (max-width: 992px) {
+      &__member {
+        width: calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding-top: 0px;
+      padding-right: 30px;
+      padding-bottom: 0px;
+      padding-left: 30px;
+
+      h2 {
+        font-size: 20px;
+        margin-bottom: 40px;
+      }
+
+      &__composition-title {
+        font-size: 18px;
+      }
+
+      &__members {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__member {
+        width: 100%;
+      }
+
+      &__regulations-title {
+        font-size: 20px;
+      }
+
+      &__regulations-section {
+        h4 {
+          font-size: 18px;
+        }
+
+        li {
+          font-size: 18px;
+        }
+      }
+    }
+  }
 }
