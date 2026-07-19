@@ -1085,21 +1085,7 @@ const Projects = () => {
                   <h2 className="eu-compliance__section-title">
                     <FormattedMessage id="INORMS.sectionTitle" />
                   </h2>
-
-                  {/* Фото */}
-                  {/* <div className="eu-compliance__images">
-                    <img
-                      src="./img/banner2.png"
-                      alt="INORMS Partnership 1"
-                      className="eu-compliance__image"
-                    />
-                    <img
-                      src="/images/inorms2.jpg"
-                      alt="INORMS Partnership 2"
-                      className="eu-compliance__image"
-                    />
-                  </div> */}
-
+                  
                   {/* Текст */}
                   <div className="eu-compliance__info-block">
                     <p>
@@ -1243,53 +1229,313 @@ const Projects = () => {
             </div>
           )}
         </div>
-
-        {/* Project 3 - Placeholder
+        {/* Project - MoI Ukraine */}
         <div className="project-item">
           <div
             className={`project-header ${
-              activeProject === 'project3' ? 'active' : ''
+              activeProject === 'moiUkraine' ? 'active' : ''
             }`}
-            onClick={() => toggleProject('project3')}
+            onClick={() => toggleProject('moiUkraine')}
           >
             <span className="project-arrow">
-              {activeProject === 'project3' ? '🔽' : '▶️'}
+              {activeProject === 'moiUkraine' ? '🔽' : '▶️'}
             </span>
             <div className="project-info">
-              <h2 className="project-title">Project3</h2>
+              <h2 className="project-title">
+                <FormattedMessage id="moiUkraine.title" />
+              </h2>
               <div className="project-subtitle">
-                Короткий опис третього проекту
+                <FormattedMessage id="moiUkraine.subtitle" />
               </div>
               <div className="project-calls">
-                Інформація про фінансування та терміни проекту
+                <FormattedMessage id="moiUkraine.calls" />
               </div>
             </div>
           </div>
 
-          {activeProject === 'project3' && (
+          {activeProject === 'moiUkraine' && (
             <div className="project-content-wrapper">
               <div className="project-content">
                 <section className="eu-compliance__section">
                   <h2 className="eu-compliance__section-title">
-                    Інформація про Project3
+                    <FormattedMessage id="moiUkraine.sectionTitle" />
                   </h2>
                   <div className="eu-compliance__info-block">
                     <p>
-                      <strong>Номер проекту:</strong> 987654321
+                      <strong>
+                        <FormattedMessage id="moiUkraine.period.label" />:
+                      </strong>{' '}
+                      <FormattedMessage id="moiUkraine.period.value" />
                     </p>
                     <p>
-                      <strong>Тип проекту:</strong> Освітній проект
+                      <strong>
+                        <FormattedMessage id="moiUkraine.funder.label" />:
+                      </strong>{' '}
+                      <FormattedMessage id="moiUkraine.funder.value" />
                     </p>
                     <p>
-                      <strong>Тривалість:</strong> 36 місяців
+                      <strong>
+                        <FormattedMessage id="moiUkraine.coordinatorTitle" />:
+                      </strong>{' '}
+                      <FormattedMessage id="moiUkraine.coordinator" />
                     </p>
-                    <p>Тут буде детальна інформація про третій проект...</p>
+                    <p>
+                      <strong>
+                        <FormattedMessage id="moiUkraine.partnersTitle" />:
+                      </strong>
+                      <br />
+                      • <FormattedMessage id="moiUkraine.partner1" />
+                      <br />
+                      • <FormattedMessage id="moiUkraine.partner2" />
+                      <br />
+                      • <FormattedMessage id="moiUkraine.partner3" />
+                      <br />
+                      • <FormattedMessage id="moiUkraine.partner4" />
+                      <br />
+                      • <FormattedMessage id="moiUkraine.partner5" />
+                    </p>
+                    <p>
+                      <strong>
+                        <FormattedMessage id="moiUkraine.website.label" />:
+                      </strong>{' '}
+                      <a
+                        href="https://www.uni-hannover.de/en/universitaet/internationales/cctonmoi/moi-ukraine#c163114"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FormattedMessage id="moiUkraine.website.value" />
+                      </a>
+                    </p>
+                    <p>
+                      <strong>
+                        <FormattedMessage id="moiUkraine.doi.label" />:
+                      </strong>{' '}
+                      <FormattedMessage id="moiUkraine.doi.value" />
+                    </p>
+                  </div>
+                </section>
+
+                <section className="eu-compliance__section">
+                  <h3 className="eu-compliance__section-title">
+                    <FormattedMessage id="moiUkraine.about.title" />
+                  </h3>
+                  <div className="eu-compliance__info-block">
+                    <p>
+                      <FormattedMessage id="moiUkraine.about.p1" />
+                    </p>
+                  </div>
+                </section>
+
+                <section className="eu-compliance__section">
+                  <h3 className="eu-compliance__section-title">
+                    <FormattedMessage id="moiUkraine.pnrmRole.title" />
+                  </h3>
+                  <div className="eu-compliance__info-block">
+                    <p>
+                      <FormattedMessage id="moiUkraine.pnrmRole.p1" />
+                    </p>
+                    <p>
+                      <FormattedMessage id="moiUkraine.pnrmRole.p2" />
+                    </p>
+                  </div>
+                </section>
+
+                <section className="eu-compliance__section">
+                  <h3 className="eu-compliance__section-title">
+                    <FormattedMessage id="moiUkraine.pnrmContribution.title" />
+                  </h3>
+                  <div className="eu-compliance__info-block">
+                    <p>
+                      <FormattedMessage id="moiUkraine.pnrmContribution.p1" />
+                    </p>
+                    <p>
+                      <FormattedMessage id="moiUkraine.pnrmContribution.p2" />
+                    </p>
+                    <p>
+                      <FormattedMessage id="moiUkraine.pnrmContribution.p3" />
+                    </p>
+                  </div>
+                </section>
+
+                <section className="eu-compliance__section">
+                  <h3 className="eu-compliance__section-title">
+                    <FormattedMessage id="moiUkraine.significance.title" />
+                  </h3>
+                  <div className="eu-compliance__info-block">
+                    <p>
+                      <FormattedMessage id="moiUkraine.significance.p1" />
+                    </p>
+                    <p>
+                      <FormattedMessage id="moiUkraine.significance.p2" />
+                    </p>
                   </div>
                 </section>
               </div>
             </div>
           )}
-        </div> */}
+        </div>
+        {/* Project - MInT-Ukraine */}
+        <div className="project-item">
+          <div
+            className={`project-header ${
+              activeProject === 'mintUkraine' ? 'active' : ''
+            }`}
+            onClick={() => toggleProject('mintUkraine')}
+          >
+            <span className="project-arrow">
+              {activeProject === 'mintUkraine' ? '🔽' : '▶️'}
+            </span>
+            <div className="project-info">
+              <h2 className="project-title">
+                <FormattedMessage id="mintUkraine.title" />
+              </h2>
+              <div className="project-subtitle">
+                <FormattedMessage id="mintUkraine.subtitle" />
+              </div>
+              <div className="project-calls">
+                <FormattedMessage id="mintUkraine.calls" />
+              </div>
+            </div>
+          </div>
+
+          {activeProject === 'mintUkraine' && (
+            <div className="project-content-wrapper">
+              <div className="project-content">
+                <section className="eu-compliance__section">
+                  <h2 className="eu-compliance__section-title">
+                    <FormattedMessage id="mintUkraine.sectionTitle" />
+                  </h2>
+                  <div className="eu-compliance__info-block">
+                    <p>
+                      <strong>
+                        <FormattedMessage id="mintUkraine.period.label" />:
+                      </strong>{' '}
+                      <FormattedMessage id="mintUkraine.period.value" />
+                    </p>
+                    <p>
+                      <strong>
+                        <FormattedMessage id="mintUkraine.funder.label" />:
+                      </strong>{' '}
+                      <FormattedMessage id="mintUkraine.funder.value" />
+                    </p>
+                    <p>
+                      <strong>
+                        <FormattedMessage id="mintUkraine.coordinatorTitle" />:
+                      </strong>{' '}
+                      <FormattedMessage id="mintUkraine.coordinator" />
+                    </p>
+                    <p>
+                      <strong>
+                        <FormattedMessage id="mintUkraine.partnersTitle" />:
+                      </strong>
+                      <br />
+                      • <FormattedMessage id="mintUkraine.partner1" />
+                      <br />
+                      • <FormattedMessage id="mintUkraine.partner2" />
+                      <br />
+                      • <FormattedMessage id="mintUkraine.partner3" />
+                      <br />
+                      • <FormattedMessage id="mintUkraine.partner4" />
+                    </p>
+                    <p>
+                      <strong>
+                        <FormattedMessage id="mintUkraine.website.label" />:
+                      </strong>{' '}
+                      <a 
+                        href="https://www.uni-hannover.de/universitaet/internationales/cctonmoi/mint-ukraine"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FormattedMessage id="mintUkraine.website.value" />
+                      </a>
+                    </p>
+                  </div>
+                </section>
+
+                <section className="eu-compliance__section">
+                  <h3 className="eu-compliance__section-title">
+                    <FormattedMessage id="mintUkraine.about.title" />
+                  </h3>
+                  <div className="eu-compliance__info-block">
+                    <p>
+                      <FormattedMessage id="mintUkraine.about.p1" />
+                    </p>
+                    <p>
+                      <FormattedMessage id="mintUkraine.about.p2" />
+                    </p>
+                    <p>
+                      <FormattedMessage id="mintUkraine.about.p3" />
+                    </p>
+                    <p>
+                      <FormattedMessage id="mintUkraine.about.p4" />
+                    </p>
+                  </div>
+                </section>
+
+                <section className="eu-compliance__section">
+                  <h3 className="eu-compliance__section-title">
+                    <FormattedMessage id="mintUkraine.pnrmRole.title" />
+                  </h3>
+                  <div className="eu-compliance__info-block">
+                    <p>
+                      <FormattedMessage id="mintUkraine.pnrmRole.intro" />
+                    </p>
+                  </div>
+                  <ul className="eu-compliance__list">
+                    <li>
+                      <FormattedMessage id="mintUkraine.pnrmRole.item1" />
+                    </li>
+                    <li>
+                      <FormattedMessage id="mintUkraine.pnrmRole.item2" />
+                    </li>
+                    <li>
+                      <FormattedMessage id="mintUkraine.pnrmRole.item3" />
+                    </li>
+                    <li>
+                      <FormattedMessage id="mintUkraine.pnrmRole.item4" />
+                    </li>
+                    <li>
+                      <FormattedMessage id="mintUkraine.pnrmRole.item5" />
+                    </li>
+                  </ul>
+                </section>
+
+                <section className="eu-compliance__section">
+                  <h3 className="eu-compliance__section-title">
+                    <FormattedMessage id="mintUkraine.impact.title" />
+                  </h3>
+                  <div className="eu-compliance__info-block">
+                    <p>
+                      <FormattedMessage id="mintUkraine.impact.intro" />
+                    </p>
+                  </div>
+                  <ul className="eu-compliance__list">
+                    <li>
+                      <FormattedMessage id="mintUkraine.impact.item1" />
+                    </li>
+                    <li>
+                      <FormattedMessage id="mintUkraine.impact.item2" />
+                    </li>
+                    <li>
+                      <FormattedMessage id="mintUkraine.impact.item3" />
+                    </li>
+                    <li>
+                      <FormattedMessage id="mintUkraine.impact.item4" />
+                    </li>
+                    <li>
+                      <FormattedMessage id="mintUkraine.impact.item5" />
+                    </li>
+                  </ul>
+                  <div className="eu-compliance__info-block">
+                    <p>
+                      <FormattedMessage id="mintUkraine.impact.closing" />
+                    </p>
+                  </div>
+                </section>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )
