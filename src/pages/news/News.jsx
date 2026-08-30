@@ -5,6 +5,14 @@ import './News.scss'
 
 const initialNews = [
   {
+    id: 21,
+    title:
+      'Відкрито набір на навчальну програму MInT-Ukraine (2026/27) для менеджерів вищої освіти',
+    date: 'До 6 вересня 2026 року',
+    imageUrlUk: '/img/photo_news/news21.png',
+    imageUrlEn: '/img/photo_news/news21.png',
+  },
+  {
     id: 20,
     title:
       'EUComplianceM4UA: третя транскордонна зустріч підтвердила практичну цінність проєкту для українських університетів',
