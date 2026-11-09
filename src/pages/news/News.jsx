@@ -5,6 +5,14 @@ import './News.scss'
 
 const initialNews = [
   {
+    id: 22,
+    title:
+      'ІІ Всеукраїнський тренінг менеджерів освіти і науки України та IV щорічна зустріч членів і партнерів PNRM Ukraine',
+    date: '19–20 листопада 2026 року',
+    imageUrlUk: '/img/photo_news/news22_ua.png',
+    imageUrlEn: '/img/photo_news/news22_en.png',
+  },
+  {
     id: 21,
     title:
       'Відкрито набір на навчальну програму MInT-Ukraine (2026/27) для менеджерів вищої освіти',
